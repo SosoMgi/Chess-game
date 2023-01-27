@@ -1,0 +1,124 @@
+\hypertarget{class_jeu}{}\doxysection{Référence de la classe Jeu}
+\label{class_jeu}\index{Jeu@{Jeu}}
+
+
+{\ttfamily \#include $<$Jeu.\+h$>$}
+
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jeu_acc5795ee00edf75516d3dfe65be3e6d6}{Jeu}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jeu_a9cd19e73df169d7f09397be61ba8548c}{$\sim$\+Jeu}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jeu_a6ff60b5eef8f6c61cb8c91d839f5da8d}{print}} ()
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}état du jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jeu_ad339f827f08dabcb27a90844822b268e}{play}} ()
+\begin{DoxyCompactList}\small\item\em Lance le jeu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_jeu_aa5cb583db06dcadf161e844fb6701282}{traitement\+\_\+input}} (\mbox{\hyperlink{class_square}{Square}} const \&commande, \mbox{\hyperlink{class_square}{Square}} $\ast$org, \mbox{\hyperlink{class_square}{Square}} $\ast$dest)
+\item 
+bool \mbox{\hyperlink{class_jeu_a4c600cc66b8f764e41e5303a8fb8a1dd}{partie\+\_\+en\+\_\+cours}} ()
+\begin{DoxyCompactList}\small\item\em verifie si la partie à prit fin. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_jeu_acae124fba6f42b5f51e8cd4911be482b}{est\+\_\+checkmate}} (\mbox{\hyperlink{_piece_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} couleur)
+\item 
+bool \mbox{\hyperlink{class_jeu_a7f9aeb2f1ce3a94888fc711c66551fe6}{est\+\_\+pat}} (\mbox{\hyperlink{_piece_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} couleur)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_jeu_acc5795ee00edf75516d3dfe65be3e6d6}\label{class_jeu_acc5795ee00edf75516d3dfe65be3e6d6}} 
+\index{Jeu@{Jeu}!Jeu@{Jeu}}
+\index{Jeu@{Jeu}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{Jeu()}{Jeu()}}
+{\footnotesize\ttfamily Jeu\+::\+Jeu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+\mbox{\Hypertarget{class_jeu_a9cd19e73df169d7f09397be61ba8548c}\label{class_jeu_a9cd19e73df169d7f09397be61ba8548c}} 
+\index{Jeu@{Jeu}!````~Jeu@{$\sim$Jeu}}
+\index{````~Jeu@{$\sim$Jeu}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{$\sim$Jeu()}{~Jeu()}}
+{\footnotesize\ttfamily Jeu\+::$\sim$\+Jeu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur. 
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_jeu_acae124fba6f42b5f51e8cd4911be482b}\label{class_jeu_acae124fba6f42b5f51e8cd4911be482b}} 
+\index{Jeu@{Jeu}!est\_checkmate@{est\_checkmate}}
+\index{est\_checkmate@{est\_checkmate}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{est\_checkmate()}{est\_checkmate()}}
+{\footnotesize\ttfamily bool Jeu\+::est\+\_\+checkmate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_piece_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}}}]{couleur }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em couleur} & de l\textquotesingle{}équipe si elle est en {\bfseries{echec et mat}} . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si echec et mat. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jeu_a7f9aeb2f1ce3a94888fc711c66551fe6}\label{class_jeu_a7f9aeb2f1ce3a94888fc711c66551fe6}} 
+\index{Jeu@{Jeu}!est\_pat@{est\_pat}}
+\index{est\_pat@{est\_pat}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{est\_pat()}{est\_pat()}}
+{\footnotesize\ttfamily bool Jeu\+::est\+\_\+pat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_piece_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}}}]{couleur }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em couleur} & de l\textquotesingle{}équipe à vérifier si {\bfseries{P\+AT}} . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si echec et mat. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jeu_a4c600cc66b8f764e41e5303a8fb8a1dd}\label{class_jeu_a4c600cc66b8f764e41e5303a8fb8a1dd}} 
+\index{Jeu@{Jeu}!partie\_en\_cours@{partie\_en\_cours}}
+\index{partie\_en\_cours@{partie\_en\_cours}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{partie\_en\_cours()}{partie\_en\_cours()}}
+{\footnotesize\ttfamily bool Jeu\+::partie\+\_\+en\+\_\+cours (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+verifie si la partie à prit fin. 
+
+\begin{DoxyReturn}{Renvoie}
+true si partie en cours. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jeu_ad339f827f08dabcb27a90844822b268e}\label{class_jeu_ad339f827f08dabcb27a90844822b268e}} 
+\index{Jeu@{Jeu}!play@{play}}
+\index{play@{play}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Jeu\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lance le jeu. 
+
+\mbox{\Hypertarget{class_jeu_a6ff60b5eef8f6c61cb8c91d839f5da8d}\label{class_jeu_a6ff60b5eef8f6c61cb8c91d839f5da8d}} 
+\index{Jeu@{Jeu}!print@{print}}
+\index{print@{print}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Jeu\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche l\textquotesingle{}état du jeu. 
+
+\mbox{\Hypertarget{class_jeu_aa5cb583db06dcadf161e844fb6701282}\label{class_jeu_aa5cb583db06dcadf161e844fb6701282}} 
+\index{Jeu@{Jeu}!traitement\_input@{traitement\_input}}
+\index{traitement\_input@{traitement\_input}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{traitement\_input()}{traitement\_input()}}
+{\footnotesize\ttfamily bool Jeu\+::traitement\+\_\+input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_square}{Square}} const \&}]{commande,  }\item[{\mbox{\hyperlink{class_square}{Square}} $\ast$}]{org,  }\item[{\mbox{\hyperlink{class_square}{Square}} $\ast$}]{dest }\end{DoxyParamCaption})}
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_jeu_8h}{Jeu.\+h}}\item 
+src/\mbox{\hyperlink{_jeu_8cc}{Jeu.\+cc}}\end{DoxyCompactItemize}

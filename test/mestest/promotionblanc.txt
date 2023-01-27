@@ -1,0 +1,11 @@
+a2a4
+b7b6
+a4a5
+b8c6
+a5b6
+a7a6
+b6b7
+a6a5
+b7b8
+Queen
+/quit

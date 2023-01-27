@@ -1,0 +1,12 @@
+a2a4
+b7b5
+a1a3
+b5a4
+a3h3
+a4a3
+f2f3
+a3a2
+c2c3
+a2a1
+Knight
+/quit

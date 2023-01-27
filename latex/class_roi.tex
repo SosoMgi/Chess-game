@@ -1,0 +1,68 @@
+\hypertarget{class_roi}{}\doxysection{Référence de la classe Roi}
+\label{class_roi}\index{Roi@{Roi}}
+
+
+{\ttfamily \#include $<$Roi.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de Roi\+:
+% FIG 0
+
+
+Graphe de collaboration de Roi\+:
+% FIG 1
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_roi_ad8c634fcf69a6927662ba038cdba1ddb}{Roi}} (\mbox{\hyperlink{_piece_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} couleur, string nom)
+\item 
+virtual bool \mbox{\hyperlink{class_roi_aa7611b380bc10199ec00ca9d9e7ec2ce}{mvt\+\_\+legal}} (\mbox{\hyperlink{class_square}{Square}} const \&position, \mbox{\hyperlink{class_echequier}{Echequier}} $\ast$echequier, bool cible\+\_\+vide)
+\begin{DoxyCompactList}\small\item\em fonction virtuel car codée dans les sous-\/classes. Elle permet de vérifier si un mouvement respecte les régles du jeu \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Cette classe représente la pièce du {\bfseries{\mbox{\hyperlink{class_roi}{Roi}}}}. Elle met en place son constructeur et une fonction qui permet de verifier si une piece de type \char`\"{}\+Roi\char`\"{} à un mouvement conforme aux régles du jeu. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_roi_ad8c634fcf69a6927662ba038cdba1ddb}\label{class_roi_ad8c634fcf69a6927662ba038cdba1ddb}} 
+\index{Roi@{Roi}!Roi@{Roi}}
+\index{Roi@{Roi}!Roi@{Roi}}
+\doxysubsubsection{\texorpdfstring{Roi()}{Roi()}}
+{\footnotesize\ttfamily Roi\+::\+Roi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_piece_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}}}]{couleur,  }\item[{string}]{nom }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_roi_aa7611b380bc10199ec00ca9d9e7ec2ce}\label{class_roi_aa7611b380bc10199ec00ca9d9e7ec2ce}} 
+\index{Roi@{Roi}!mvt\_legal@{mvt\_legal}}
+\index{mvt\_legal@{mvt\_legal}!Roi@{Roi}}
+\doxysubsubsection{\texorpdfstring{mvt\_legal()}{mvt\_legal()}}
+{\footnotesize\ttfamily bool Roi\+::mvt\+\_\+legal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_square}{Square}} const \&}]{cible,  }\item[{\mbox{\hyperlink{class_echequier}{Echequier}} $\ast$}]{echequier,  }\item[{bool}]{cible\+\_\+vide }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+fonction virtuel car codée dans les sous-\/classes. Elle permet de vérifier si un mouvement respecte les régles du jeu 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em cible} & position où l\textquotesingle{}on souhaite mettre la piece \\
+\hline
+\mbox{\texttt{ in}}  & {\em echequier} & qui est un pointeur vers la grille du jeu \\
+\hline
+\mbox{\texttt{ in}}  & {\em cible\+\_\+vide} & booléen qui indique si la case atteindre est vide \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si le mouvement respecte les régles du jeu 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_piece_ab415c376e85da0cc8ecd3dfd07d719dd}{Piece}}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+include/piece/\mbox{\hyperlink{_roi_8h}{Roi.\+h}}\item 
+src/piece/\mbox{\hyperlink{_roi_8cc}{Roi.\+cc}}\end{DoxyCompactItemize}

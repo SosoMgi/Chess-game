@@ -1,0 +1,52 @@
+\hypertarget{md__readme_autotoc_md1}{}\doxysection{Usage}\label{md__readme_autotoc_md1}
+To compile use
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make}
+\end{DoxyCode}
+
+
+To cleanup compilation files
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make}
+\DoxyCodeLine{make clean}
+\end{DoxyCode}
+
+
+To run the programm simply execute\+: make then {\ttfamily ./bin/echecs} {\itshape Tested on Ubuntu 18 and W\+S\+L1}
+
+To run tests use
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make}
+\DoxyCodeLine{make test}
+\end{DoxyCode}
+
+
+To run doxyfile
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make docs}
+\end{DoxyCode}
+\hypertarget{md__readme_autotoc_md2}{}\doxysection{Documentation}\label{md__readme_autotoc_md2}
+See in {\ttfamily doc/html/} folder\hypertarget{md__readme_autotoc_md3}{}\doxysection{Note sur le projet\+:}\label{md__readme_autotoc_md3}
+Ce qui est fonctionnel\+: -\/Fonctionnalité de base -\/prise -\/\mbox{\hyperlink{class_pion}{Pion}} -\/Obstacle -\/Promotion -\/Echec -\/Roque -\/Echec et mat -\/Pat
+
+La structure de mon projet suit en grande partie la structure conseillé par l\textquotesingle{}énnoncé. J\textquotesingle{}ai donc une classe \mbox{\hyperlink{class_square}{Square}} qui représente les cases du plateau, Une classe \mbox{\hyperlink{class_piece}{Piece}} qui représente l\textquotesingle{}abstraction d\textquotesingle{}une pièce et une sous-\/classe par pièce qui en hérite. Enfin, il y a deux autres classes\+: \mbox{\hyperlink{class_echequier}{Echequier}} et \mbox{\hyperlink{class_jeu}{Jeu}} qui gouvernent les actions sur l\textquotesingle{}échéquier et le déroulement du jeu global.
+
+Déroulement du projet\+:
+
+1) J\textquotesingle{}ai commencé par créer les classes \mbox{\hyperlink{class_square}{Square}} et \mbox{\hyperlink{class_piece}{Piece}} avec ses sous-\/classes. Je me suis attardé sur les mouvements légaux puisque je ne savais pas jouer aux échecs.
+
+2) J\textquotesingle{}ai rapidement codé les fonctions qui étaient en grande partie données.
+
+3) Je me suis attardé sur la régle d\textquotesingle{}echec. En effet, à partir de se moment, le niveau de difficulté à fortement augmenté. Pour tester tout les mouvements possibles et revenir au point de jeu avant les testes d\textquotesingle{}echec et mat (qui oblige à déplacer de pièces), j\textquotesingle{}ai trouvé comme seule solution de cloner la grille de jeu. Ainsi, tout les mouvement effectué dans l\textquotesingle{}algorithme de détermination d\textquotesingle{}echecs sont vu comme fictif. En revanche, bien que les mouvements n\textquotesingle{}étaient pas sauvegardés, les attributs de classe eux l\textquotesingle{}étaient. D\textquotesingle{}où la présence du booléen et la méthode \mbox{\hyperlink{class_echequier_a4fdf6479812e60e7a110a205d4f0720e}{Echequier\+::mvt()}}. Udapte\+\_\+position fait la même chose mais à plus grande échelle. Utile pour echec et mat. Cependant, j\textquotesingle{}ai remarqué que les pièces ne sont pas clonées puisqu\textquotesingle{}elles sont enregistrées dans le tas, là où le reste des variables sont dans la pile. Donc les piéces sont communes à tout les plateau de jeux. Ainsi, libérer la mémoire d\textquotesingle{}une pièce un plateau la libéré aussi sur les autres plateaux. C\textquotesingle{}est pour cela qu\textquotesingle{}il y a un booléen en argument sur les fonctions de mouvement pour savoir si ce movement est fictif ou non, est donc si on doit libérer la mémoire ou non.
+
+4) Pour le pat et l\textquotesingle{}échec et mat, je l\textquotesingle{}ai implémenté de façon naïf. On regarde toutes les cases. Si la case est accessible par mvt\+\_\+legal() et si elle empêche l\textquotesingle{}echec, alors on return false.
+
+Difficultés\+: -\/Apprendre les règles. -\/Gestion de la mémoire. -\/Connecter \mbox{\hyperlink{class_echequier}{Echequier}} et \mbox{\hyperlink{class_piece}{Piece}} sans redondance -\/Algorithmes 

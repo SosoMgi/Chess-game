@@ -1,0 +1,70 @@
+\hypertarget{class_dame}{}\doxysection{Référence de la classe Dame}
+\label{class_dame}\index{Dame@{Dame}}
+
+
+{\ttfamily \#include $<$Dame.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de Dame\+:
+% FIG 0
+
+
+Graphe de collaboration de Dame\+:
+% FIG 1
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dame_a1057db75d42bc727f0dab0b298d88783}{Dame}} (\mbox{\hyperlink{_piece_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} couleur, string nom)
+\item 
+virtual bool \mbox{\hyperlink{class_dame_a8d03a55be7702bbe6f67d39604258960}{mvt\+\_\+legal}} (\mbox{\hyperlink{class_square}{Square}} const \&position, \mbox{\hyperlink{class_echequier}{Echequier}} $\ast$echequier, bool cible\+\_\+vide)
+\begin{DoxyCompactList}\small\item\em fonction virtuel car codée dans les sous-\/classes. Elle permet de vérifier si un mouvement respecte les régles du jeu \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Cette classe représente la pièce {\bfseries{\mbox{\hyperlink{class_dame}{Dame}}}}.~\newline
+Elle met en place son constructeur et une fonction qui permet de verifier si une piece de type \char`\"{}\+Dame\char`\"{} à un mouvement conforme aux régles du jeu. ~\newline
+Ses mouvement sont un mixte du fou et de la tour. Donc, elle herite de ces classes pour allger \mbox{\hyperlink{class_dame_a8d03a55be7702bbe6f67d39604258960}{mvt\+\_\+legal()}} 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_dame_a1057db75d42bc727f0dab0b298d88783}\label{class_dame_a1057db75d42bc727f0dab0b298d88783}} 
+\index{Dame@{Dame}!Dame@{Dame}}
+\index{Dame@{Dame}!Dame@{Dame}}
+\doxysubsubsection{\texorpdfstring{Dame()}{Dame()}}
+{\footnotesize\ttfamily Dame\+::\+Dame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_piece_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}}}]{couleur,  }\item[{string}]{nom }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_dame_a8d03a55be7702bbe6f67d39604258960}\label{class_dame_a8d03a55be7702bbe6f67d39604258960}} 
+\index{Dame@{Dame}!mvt\_legal@{mvt\_legal}}
+\index{mvt\_legal@{mvt\_legal}!Dame@{Dame}}
+\doxysubsubsection{\texorpdfstring{mvt\_legal()}{mvt\_legal()}}
+{\footnotesize\ttfamily bool Dame\+::mvt\+\_\+legal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_square}{Square}} const \&}]{cible,  }\item[{\mbox{\hyperlink{class_echequier}{Echequier}} $\ast$}]{echequier,  }\item[{bool}]{cible\+\_\+vide }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+fonction virtuel car codée dans les sous-\/classes. Elle permet de vérifier si un mouvement respecte les régles du jeu 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em cible} & position où l\textquotesingle{}on souhaite mettre la piece \\
+\hline
+\mbox{\texttt{ in}}  & {\em echequier} & qui est un pointeur vers la grille du jeu \\
+\hline
+\mbox{\texttt{ in}}  & {\em cible\+\_\+vide} & booléen qui indique si la case atteindre est vide \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si le mouvement respecte les régles du jeu 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_fou_ad7bb7bc9430369a140a8765ebfbd14d1}{Fou}}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+include/piece/\mbox{\hyperlink{_dame_8h}{Dame.\+h}}\item 
+src/piece/\mbox{\hyperlink{_dame_8cc}{Dame.\+cc}}\end{DoxyCompactItemize}
